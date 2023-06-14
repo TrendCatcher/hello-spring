@@ -64,7 +64,7 @@ hello-spring
    2. 반복 실행하기 어렵다
    3. 여러 테스트를 한번에 실행하기 어렵다.
 
-자바는 이러한 문제를 해결하기 위해 <span sttle="color:green">**JUnit**</span>이라는 프레임워크로 테스트를 실행해서 이러한 문제를 해결한다.
+자바는 이러한 문제를 해결하기 위해 <span sttle="color:green"> **JUnit** </span>이라는 프레임워크로 테스트를 실행해서 이러한 문제를 해결한다.
 
 
 ## 디자인 패턴
@@ -74,12 +74,28 @@ hello-spring
 
 
 
-## 🚀
+## 🚀 더 조사하고 정리할 것들 (Live Document)
+- repository/MemoryMemberRepository.java
+    <자료형>
+  - Hashmap
+  - List
+  <그 외>
+  - sequence
+  - Optional
+  
+  
+  - 코드분석 
+```java
+    return store.values().stream()
+                .filter(member -> member.getName().equals(name))
+                .findAny();
+```
 
 ---
 
 ## 🎯 알면 유용한 IntelliJ 단축키
 
--
+- Alt + Enter : 
+- Ctrl + Shift + Enter : 자동 완성 기능
 
 ---

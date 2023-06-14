@@ -6,7 +6,7 @@ import java.util.*;
 
 public class MemoryMemberRepository implements MemberRepository{ // Alt + Enter 키로 인터페이스 메소드 오바라이드 가능
 
-    private static Map<Long, Member> store = new HashMap<>();
+    private static Map<Long, Member> store = new HashMap<>();       // Map 자료구조에 대해 조사, 정리하기
     private static long sequence = 0L;
     @Override
     public Member save(Member member) {
