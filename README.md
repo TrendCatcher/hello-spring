@@ -78,6 +78,7 @@ hello-spring
 - repository/MemoryMemberRepository.java
     <자료형>
   - Hashmap
+    - 데이터 검색 및 조회: 키-쌍을 저장하는 자료구조로, 특정 키를 사용하여 값을 검색하고 조회하는 데 효과적이다.  
   - List
   <그 외>
   - sequence
@@ -93,9 +94,11 @@ hello-spring
 
 ---
 
-## 🎯 알면 유용한 IntelliJ 단축키
+## 🎯 알면 유용한 IntelliJ 단축키 및 꿀팁
 
 - Alt + Enter : 
 - Ctrl + Shift + Enter : 자동 완성 기능
+- 블록 주석(/**/)과 한줄 주석(//) 색깔 변경 가능!
+  - 나의 경우 블록 주석만 초록색으로 변경하여 코드 설명을 위한 더 가독성있는 요소를 고려함
 
 ---

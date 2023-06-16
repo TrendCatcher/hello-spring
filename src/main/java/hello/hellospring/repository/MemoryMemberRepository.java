@@ -6,12 +6,12 @@ import java.util.*;
 
 public class MemoryMemberRepository implements MemberRepository{ // Alt + Enter 키로 인터페이스 메소드 오바라이드 가능
 
-    private static Map<Long, Member> store = new HashMap<>();       // Map 자료구조에 대해 조사, 정리하기
+    private static Map<Long, Member> store = new HashMap<>();       // store.을 통해 HashMap자료구조 접근 가능
     private static long sequence = 0L;
     @Override
     public Member save(Member member) {
         member.setId(++sequence);   //id 세팅을 하고
-        store.put(member.getId(),member);   //store(맵)에 저장함
+        store.put(member.getId(),member);   //store(hash map)에 저장함, 자료형은 <Long, Member>였음
         return member;  //결과 반환
 
     }
@@ -25,7 +25,7 @@ public class MemoryMemberRepository implements MemberRepository{ // Alt + Enter 
     public Optional<Member> findByName(String name) {
         return store.values().stream()
                 .filter(member -> member.getName().equals(name))
-                .findAny(); //루프를 돌면서 해당하는 것을 반환
+                .findAny(); //루프를 돌면서 해당하는 것을 반환(추가조사 필요)
     }
 
     @Override
