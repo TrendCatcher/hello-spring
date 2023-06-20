@@ -1,0 +1,59 @@
+package hello.hellospring.service;
+
+import hello.hellospring.domain.Member;
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import java.util.Optional;
+
+import static org.assertj.core.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;
+
+class MemberServiceTest {
+// 테스트 코드는 과감히 한글로 적어도 된다! 빌드 될 때 실제 코드에 포함되지 않음
+    MemberService memberService = new MemberService();
+    @Test
+    void 회원가입() {
+        //given, 무언가 주어졌을 때
+        Member member = new Member();
+        member.setName("hello");
+        //when, 실행했을 때
+        Long saveId = memberService.join(member);
+
+        //then, 원하는 결과가 나와야 함
+        Member findMember = memberService.findOne(saveId).get();
+        assertThat(member.getName()).isEqualTo(findMember.getName());
+    }
+
+    @Test
+    void 중복_회원_예외(){
+        //given
+        Member member1 = new Member();
+        member1.setName("spring");
+
+        Member member2 = new Member();
+        member2.setName("spring");
+        //when
+        memberService.join(member1);
+        assertThrows(IllegalStateException.class, () ->memberService.join(member2));
+        /*
+        try {
+            memberService.join(member2);
+            fail();
+        }catch(IllegalStateException e){
+            assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.")
+        }
+        */
+        //then
+
+
+    }
+
+    @Test
+    void findMembers() {
+    }
+
+    @Test
+    void findOne() {
+    }
+}
