@@ -75,6 +75,7 @@ hello-spring
 
 
 ## 🚀 더 조사하고 정리할 것들 (Live Document)
+- <src/main>
 - repository/MemoryMemberRepository.java
     <자료형>
   - Hashmap
@@ -83,7 +84,7 @@ hello-spring
   <그 외>
   - sequence
   - Optional
-  
+  - IllegalState
   
   - 코드분석 
 ```java
@@ -91,7 +92,9 @@ hello-spring
                 .filter(member -> member.getName().equals(name))
                 .findAny();
 ```
-
+- <src/test>
+  - @AfterEach: 해당 어노테이션 안의 메소드는 @Test 어노테이션이 끝나면 반드시 실행이 됨.
+    - MemoryMemberReposotory.java안의 @AfterEach는 테스트 한번 실행시 DB를 비우는 기능으로 활용됨.
 ---
 
 ## 🎯 알면 유용한 IntelliJ 단축키 및 꿀팁
