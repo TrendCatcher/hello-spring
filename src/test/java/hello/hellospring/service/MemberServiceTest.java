@@ -1,7 +1,10 @@
 package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
+import hello.hellospring.repository.MemoryMemberRepository;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
@@ -11,7 +14,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
 // 테스트 코드는 과감히 한글로 적어도 된다! 빌드 될 때 실제 코드에 포함되지 않음
-    MemberService memberService = new MemberService();
+    MemberService memberService;
+    MemoryMemberRepository memberRepository;
+
+    @BeforeEach
+    public void beforeEach(){
+        memberRepository = new MemoryMemberRepository();
+        memberService = new MemberService(memberRepository);
+    }
+
+    @AfterEach
+    public void afterEach(){       //콜백함수, save()킅나고 findByName(), findByName()이 끝나고 findAll()
+        memberRepository.clearstore();    // 한번 실행 될때 마다 클리어 함
+    }
     @Test
     void 회원가입() {
         //given, 무언가 주어졌을 때

@@ -74,7 +74,7 @@ hello-spring
 
 
 
-## 🚀 더 조사하고 정리할 것들 (Live Document)
+## 🚀 더 조사하고 정리할 것들 (Live Document🚩)
 - <src/main>
 - repository/MemoryMemberRepository.java
     <자료형>
@@ -84,6 +84,13 @@ hello-spring
   <그 외>
   - sequence
   - Optional
+    - [chatgpt ref]`Optional` is class used to represent an object that may or may not exist.
+    - it provides a way to handle situations where a value could be null, allowing you to avoid `null checks` and `NullPointerExceptions`
+    <Related methods>
+    - OfNullable()
+      - 
+    - isPresent()
+      - 
   - IllegalState
   
   - 코드분석 
@@ -94,18 +101,18 @@ hello-spring
 ```
 - <src/test>
   - @AfterEach: 해당 어노테이션 안의 메소드는 @Test 어노테이션이 끝나면 반드시 실행이 됨.
-    - MemoryMemberReposotory.java안의 @AfterEach는 테스트 한번 실행시 DB를 비우는 기능으로 활용됨.
+    - MemoryMemberReposotory.java안의 @AfterEach는 테스트 한번 실행시 DB를 비우는 기능으로 활용됨
 ---
 
 ## 🎯 알면 유용한 IntelliJ 단축키 및 꿀팁
 
-- Alt + Enter : 
+- Alt + Enter : 필요한 기능 수정가능 
 - Ctrl + Shift + Enter : 자동 완성 기능
 - 블록 주석(/**/)과 한줄 주석(//) 색깔 변경 가능!
   - 나의 경우 블록 주석만 초록색으로 변경하여 코드 설명을 위한 더 가독성있는 요소를 고려함
 - Ctrl + Shift + /: 주석처리(블록/**/)
 - Ctrl + /: 주석처리 (//)
-
+- Alt + Insert: Generate기능으로 생성자(Constructor)등을 삽입할 수 있다. 
 > 테스팅 관련
 
 - Ctrl + Shift + T: 테스트 코드 자동생성 (테스트를 하고자 하는 클래스 이름에 입력)
