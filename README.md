@@ -87,10 +87,19 @@ hello-spring
     - [chatgpt ref]`Optional` is class used to represent an object that may or may not exist.
     - it provides a way to handle situations where a value could be null, allowing you to avoid `null checks` and `NullPointerExceptions`
     <Related methods>
-    - OfNullable()
-      - 
-    - isPresent()
-      - 
+    - `OfNullable()`
+      - Returns an Optional describing the given value, if non-null, otherwise returns an empty Optional.
+      - **Params(매개변수)**:
+        value – the possibly-null value to describe
+      - **Returns(리턴형)**:
+        an Optional with a present value if the specified value is non-null, otherwise an empty Optional
+    - `isPresent()`
+      - If a value is present, performs the given action with the value, otherwise does nothing.
+      - **Params(매개변수)**:
+        action – the action to be performed, if a value is present
+      - Throws:
+        NullPointerException – if value is present and the given action is null
+      
   - IllegalState
   
   - 코드분석 
@@ -99,6 +108,14 @@ hello-spring
                 .filter(member -> member.getName().equals(name))
                 .findAny();
 ```
+1. store.values() : retrieves the collection of 'Member' objects from 'store' variable
+2. .stream(): converts the collection of 'Member' objects into a stream
+              Streams provide a way to perform operations on a sequence of elements.
+3. .filter(~): applies a filter to the stream, only allowing 'Member' objects whose name matches
+                the provided 'name' parameter to pass through.
+4. findAny(): returns an 'Optional <Member>' object containing an arbitrary 'Member' object
+              from the filtered stream, or an empty 'Optional' if no match is found.
+              the "findAny()' operation is non-deterministic and doesn't guarantee a specific element from the stream. 
 - <src/test>
   - @AfterEach: 해당 어노테이션 안의 메소드는 @Test 어노테이션이 끝나면 반드시 실행이 됨.
     - MemoryMemberReposotory.java안의 @AfterEach는 테스트 한번 실행시 DB를 비우는 기능으로 활용됨
