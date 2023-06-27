@@ -4,7 +4,7 @@ import hello.hellospring.domain.Member;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
-@Repository
+
 public class MemoryMemberRepository implements MemberRepository{ // Alt + Enter 키로 인터페이스 메소드 오바라이드 가능
 
     private static Map<Long, Member> store = new HashMap<>();       // store.(확장자)을 통해 HashMap 자료구조 접근 가능

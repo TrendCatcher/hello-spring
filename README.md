@@ -122,26 +122,30 @@ hello-spring
 ---
 
 ## 🎯 알면 유용한 IntelliJ 단축키 및 꿀팁
+> 클래스 검색, 설정 및 주석 관련
 
-- Alt + Enter : 필요한 기능 수정가능 
-- Ctrl + Shift + Enter : 자동 완성 기능
+- `Alt + Enter` : 필요한 기능 수정가능 
+- `Ctrl + Shift + Enter` : 자동 완성 기능
 - 블록 주석(/**/)과 한줄 주석(//) 색깔 변경 가능!
   - 나의 경우 블록 주석만 초록색으로 변경하여 코드 설명을 위한 더 가독성있는 요소를 고려함
-- Ctrl + Shift + /: 주석처리(블록/**/)
-- Ctrl + /: 주석처리 (//)
-- Alt + Insert: Generate기능으로 생성자(Constructor)등을 삽입할 수 있다. 
-- Ctrl + 클릭: 해당 클래스로 이동
+- `Ctrl + Shift + /`: 주석처리(블록/**/)
+- `Ctrl + /`: 주석처리 (//)
+- `Alt + Insert`: `Generate`기능으로 생성자(Constructor)등을 삽입할 수 있다. 
+- `Ctrl + 클릭`: 해당 클래스로 이동
+- `Ctrl + Alt + N`: 파일(클래스) 생성
+- `Ctrl + N`: 파일(클래스) 컴색
+
 > 테스팅 관련
 
 - Ctrl + Shift + T: 테스트 코드 자동생성 (테스트를 하고자 하는 클래스 이름에 입력)
 
 ---
 
-## 병행할 토이 프로젝트 주제
+## 💫 병행할 토이 프로젝트 주제
 - 심리케어 웹 서비스
   - 현재 심리상태 진단
   - 진단토대로 가장 가까운 오프라인 상담소 혹은 병원 보여주기
   - CRUD 구현
 
-## Debugging Reference
+## ❗ Debugging Reference
 - [8080포트 사용중 에러](https://pingfanzhilu.tistory.com/entry/Spring-boot-Web-server-failed-to-start-Port-8080-was-already-in-use-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95)
