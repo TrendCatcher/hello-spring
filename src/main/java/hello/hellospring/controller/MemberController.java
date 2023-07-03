@@ -13,10 +13,8 @@ import org.springframework.stereotype.Controller;
 public class MemberController {
 
     private final MemberService memberService;
-
-
     @Autowired
-    public MemberController(MemberService memberService){   //오류발생, memberService가 스프링 빈으로 등록되어 있지 않음
+    public MemberController(MemberService memberService){   // 생성자를 통해서 주입(DI)
 
         this.memberService = memberService;
     }

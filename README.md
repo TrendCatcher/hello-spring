@@ -101,8 +101,11 @@ hello-spring
         NullPointerException – if value is present and the given action is null
       
   - IllegalState
+
+  - 자바코드로 스프링 빈 설정시 유리한점
+    - 상황에 따라 구현 클래스를 변경해야할 때 설정을 통해 변경(**가장 중요한 이유**)
   
-  - 코드분석 
+      - 코드분석 
 ```java
     return store.values().stream()
                 .filter(member -> member.getName().equals(name))
