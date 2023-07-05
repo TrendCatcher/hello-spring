@@ -19,9 +19,15 @@ public class MemberService {
     /*
     * 회원 가입
     */
-    public long join(Member member){
+    /*public long join(Member member){
         // Member member1 = result.get();  // 만약에 값을 바로 꺼내고 싶다면
         validateDuplicateMember(member);     // 중복 회원 검증
+        memberRepository.save(member);
+        return member.getId();
+
+    }*/
+    public long join(Member member){
+        validateDuplicateMember(member);
         memberRepository.save(member);
         return member.getId();
 

@@ -23,7 +23,7 @@ hello-spring
                                     └─ MemberRepository(Interface)
                                     └─ MemoryMemberRepository
                               └─ service   
-                                    └─ MemberService  // 회원가입 && 전체회원 조회
+                                    └─ MemberService  // 회원가입(join()) && 전체회원 조회
    │    └─  resources
    └─ test    // test case에 관한 파일     
     │
@@ -122,6 +122,14 @@ hello-spring
 - <src/test>
   - @AfterEach: 해당 어노테이션 안의 메소드는 @Test 어노테이션이 끝나면 반드시 실행이 됨.
     - MemoryMemberReposotory.java안의 @AfterEach는 테스트 한번 실행시 DB를 비우는 기능으로 활용됨
+
+- Section 5 [회원 관리 예제 웹 MVC개발 ]
+  - 정적콘텐츠 입력시 localhost:8080 요청이 오면...
+  
+
+  1. 먼저 Controller(Homecontroller)를 뒤진다.
+  2. 없으면 정적리소스를 호출한다. 
+  - 여기서는 HomeController를 뒤지고 매핑된 url을 찾아 띄운다.
 ---
 
 ## 🎯 알면 유용한 IntelliJ 단축키 및 꿀팁
