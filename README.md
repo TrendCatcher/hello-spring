@@ -27,10 +27,11 @@ hello-spring
    │    └─  resources
    └─ test    // test case에 관한 파일     
     │
-    └─ ClientGUI.java   // chat client를 위한 UI 설계
+    └─ repository  
+    │     └─MemoryMemberRepositoryTest  // member 회원가입, 조회 테스팅
     │
-    │
-    └─ SimpleChatClientFrame.java // 서버 UI와 서버 인스턴스의 생성
+    └─ service 
+          └─MemberServiceTest // 회원가입, 중복제거 테스팅
 ```
 ## 📮 진행 내용
 
