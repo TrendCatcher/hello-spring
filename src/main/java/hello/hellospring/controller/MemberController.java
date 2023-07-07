@@ -9,8 +9,11 @@ import hello.hellospring.domain.Member;
 import hello.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Controller
 public class MemberController {
@@ -36,6 +39,13 @@ public class MemberController {
         memberService.join(member);
 
         return "redirect:/";
+    }
+    @GetMapping("/members")
+    public String list(Model model){
+        List<Member> members = memberService.findMembers();
+        model.addAttribute("members", members);
+        //addAttribute(): controller method에 view로 데이터를 전송하기 위해 사용, model로 member속성 전송
+        return "members/memberList";
     }
 
 
