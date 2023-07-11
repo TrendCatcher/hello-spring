@@ -98,10 +98,9 @@ hello-spring
       - If a value is present, performs the given action with the value, otherwise does nothing.
       - **Params(매개변수)**:
         action – the action to be performed, if a value is present
-      - Throws:
-        NullPointerException – if value is present and the given action is null
+      - Throws NullPointerException – if value is present and the given action is null
       
-  - IllegalState
+ 
 
   - 자바코드로 스프링 빈 설정시 유리한점
     - 상황에 따라 구현 클래스를 변경해야할 때 설정을 통해 변경(**가장 중요한 이유**)
@@ -112,6 +111,12 @@ hello-spring
                 .filter(member -> member.getName().equals(name))
                 .findAny();
 ```
+- Stream API: 다량의 처리작업을 돕고자 자바8에 추가됨, 제공하는 핵심 추상개념 2가지는 다음과 같다. 
+  1. `스트림`은 데이터 원소의 유한 혹은 무한 시퀸스를 뜻함.
+  2. `스트림 파이프 라인`은 이 원소들로 수행하는 연산 단계를 포함.
+     - 소스 스트림에서 시작해 종단 연산(terminal operation)으로 끝나며, 그 사이 하나 이상의 중간연산(intermediate operation)이 존재할 수도 있다. 
+  - Stream안의 데이터 원소들은 객체 참조나 기본 타입 값(int, dougle, long)이다.  
+
 1. store.values() : retrieves the collection of 'Member' objects from 'store' variable
 2. .stream(): converts the collection of 'Member' objects into a stream
               Streams provide a way to perform operations on a sequence of elements.
