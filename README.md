@@ -177,7 +177,8 @@ hello-spring
 **[Techniques]**
   - CRUD 구현
 
-## ❗ Debugging Reference
+## ❗ Debugging and other Reference
 - [8080포트 사용중 에러](https://pingfanzhilu.tistory.com/entry/Spring-boot-Web-server-failed-to-start-Port-8080-was-already-in-use-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95)
 - [h2.bat 실행 오류](https://velog.io/@godqhrals/%EC%9C%88%EB%8F%84%EC%9A%B0-H2-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%8B%A4%ED%96%89-%EC%B4%88%EB%B0%98%EC%97%90-h2.bat-%EC%8B%A4%ED%96%89-%EC%98%A4%EB%A5%98)
   - cmd 관리자 모드 실행 후 bin 폴더에서 `"h2.bat"` 입력 
+- [cmd에서 특정 파일 이름 찾기]: dir /s `filename`
