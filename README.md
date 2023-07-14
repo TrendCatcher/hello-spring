@@ -182,3 +182,5 @@ hello-spring
 - [h2.bat 실행 오류](https://velog.io/@godqhrals/%EC%9C%88%EB%8F%84%EC%9A%B0-H2-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%8B%A4%ED%96%89-%EC%B4%88%EB%B0%98%EC%97%90-h2.bat-%EC%8B%A4%ED%96%89-%EC%98%A4%EB%A5%98)
   - cmd 관리자 모드 실행 후 bin 폴더에서 `"h2.bat"` 입력 
 - [cmd에서 특정 파일 이름 찾기]: dir /s `filename`
+- [javax.sql.DataSource import 안 됨 에러] 
+  - 캐시를 비우고 재실행. 상단 메뉴바에서 `File` > `Invalidate Caches` /` Restart`를 선택하고 IDE가 재실행되기를 기다리면 해결!
