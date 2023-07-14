@@ -137,10 +137,15 @@ hello-spring
   2. 없으면 정적리소스를 호출한다. 
   - 여기서는 HomeController를 뒤지고 매핑된 url을 찾아 띄운다.
 
-- Section 5 [회원 관리 예제 웹 MVC개발 - memebr register ]
+###  Section 5 [회원 관리 예제 웹 MVC개발 - memebr register ]
   - Get vs Post 
     - Get: url던지기
     - Post: 데이터를 폼에 넣어서 전달 
+### Section 6 [Pure JDBC]
+> Spring를 사용하는 이유
+- 인터페이스를 두고 구현체를 바꿔끼기 가능! (다형성)
+- DI(Dependency Injection)가 스프링의 컨테이너를 통해 구현됨
+    
 ---
 
 ## 🎯 알면 유용한 IntelliJ 단축키 및 꿀팁
