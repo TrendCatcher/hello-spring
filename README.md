@@ -145,7 +145,18 @@ hello-spring
 > Spring를 사용하는 이유
 - 인터페이스를 두고 구현체를 바꿔끼기 가능! (다형성)
 - DI(Dependency Injection)가 스프링의 컨테이너를 통해 구현됨
-    
+- OOP(Opened-Closed Principle)
+  - application 동작에 필요한 코드 변경은 안 해도 됨!
+
+### Section 6 [Integration Test]
+- @SpringBootTest
+  - 스프링 컨테이너와 함꼐 테스트 한다. 
+- @transactional
+  - test 코드에 넣으면 transaction을 먼저 실행하고, DB에 데이터를 넣었다면,  테스트 종료시 데이터를 롤백함(반영 X).
+  - @beforeeach, @aftereach 없이도 `테스트 반복` 가능!
+- 가급적이면 순수 단위 테스트로 진행하자!
+    - SpringContainer를 사용한 테스트는 `지양`!
+
 ---
 
 ## 🎯 알면 유용한 IntelliJ 단축키 및 꿀팁
