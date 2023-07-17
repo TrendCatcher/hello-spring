@@ -157,6 +157,11 @@ hello-spring
 - 가급적이면 순수 단위 테스트로 진행하자!
     - SpringContainer를 사용한 테스트는 `지양`!
 
+### Section 6 [jdbcTempleate]
+- memberRowMapper()
+  - used to map database result set to member object 
+- findById()
+  - jdbcTemplate를 사용해 query를 날려 결과를 memberRowMapper()로 매핑시킨후, List로 받아서 Optional로 반환
 ---
 
 ## 🎯 알면 유용한 IntelliJ 단축키 및 꿀팁
